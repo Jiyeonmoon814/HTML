@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+    <title>Links</title>
+    <style>
+        a:link{
+            color: blueviolet;
+            background-color: palevioletred;
+            text-decoration: plum;
+        }
+
+        a:visited{
+            color: pink;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:hover{
+            color: rgb(156, 224, 136);
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        a:active{
+            color: yellow;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        Links-sysntax
+    </h1>
+    <p>
+        <a href="https://www.naver.com">Visit naver!</a>
+        <a href="#c6">Jump to Chapter 6</a>
+    </p>
+
+    <h2>target="_blank" to poen the linked document in a new browser</h2>
+    <p>
+        <a href="https://www.naver.com" target="_blank"> Visit naver in a new browser window</a>
+    </p>
+
+    <h3>Absolute URLs & Relative URLs</h3>
+    <p><a href="https://www.google.com">google</a>
+   </p>
+   
+   <h3>Image as a Link</h3>
+   <p><a href="https://www.bbc.com/news">
+    <img src="dogs.JPG" alt="BBC NEWS HOME"
+    style="width: 50; height: 50;"></a>
+    </p>
+
+    <h4>Link to an E-mail address</h4>
+    <p><a href="mailto:mjyinlondon@gamil.com">Send email to jiyeon</a></p>
+
+    <h5>button link</h5>
+    <p><button onclick="document.location='https://www.bbc.com/news'">BBC</button></p>
+    
+
+  
+    <h6 id="c6">Link Titles
+    </h6>
+    <p><a href="https://www.bbc.com/news" title="go to bbc news">visit bbc</a></p>
+</body>

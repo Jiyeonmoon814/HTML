@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<head>
+    <title>Tables</title>
+    <style>
+        table, th, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+      
+        th, td{
+            text-align: center;
+            padding: 15px;
+        }
+        #t1{
+            width: 100%;
+            background-color: #f1f1c1;
+        }
+
+        #t2{
+            width: 100%;
+        }
+
+        #t2 tr:nth-child(even){
+            background-color: #eee;
+        }
+        #t2 tr:nth-child(odd){
+            background-color: paleturquoise;
+        }
+
+        #t2 th{
+            color: white;
+            background-color:palevioletred;
+        }
+
+        #t3 th, td{
+            padding : 5px;
+            text-align: left;
+        }
+
+
+    </style>
+</head>
+
+<!--#id는 식별자의 역할, 하나의 요소를 선택-->
+<body>
+<h1>Table</h1>
+<p><table id="t1";>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Nationality</th>
+    </tr>
+
+    <tr>
+        <td>Jiyeon</td>
+        <td>Moon</td>
+        <td>South Korea</td>
+    </tr>
+
+    <tr>
+        <td>Andrius</td>
+        <td>Uzkuraitis</td>
+        <td>Lithuania</td>
+    </tr>
+    </p>
+
+    <h2>Table caption</h2>
+    <table id="t2">
+    <Caption>Monthly savings</Caption>
+        <tr>
+            <th>Month</th>
+            <th>Savings</th>
+        </tr>
+
+        <tr>
+            <td>January</td>
+            <td>Feburary</td>
+        </tr>
+
+        <tr>
+            <td>$100</td>
+            <td>$200</td>
+        </tr>
+    </table>
+
+    <h3>Cell that spans two rows</h3>
+    <table style="width: 100%;">
+        <tr>
+            <th>Name:</th>
+            <th>Jiyeon</th>
+        </tr>    
+
+        <tr>
+            <th rowspan="2">Telephone:</th>
+            <td>12345678</td>
+        </tr>
+
+        <tr>
+            <td>07593249887</td>
+        </tr>
+    </table>
+
+    <table>
+    <h4>Cell that spans two columns</h4>
+    <tr>
+        <th>Name</th>
+        <th colspan="2">Age/Birth</th>
+    </tr>
+
+    <tr>
+        <td>Andrius</td>
+        <td>28</td>
+        <td>02 June 1992</td>
+    </tr>
+
+    </table>
+</body>
+    
+    
+
+  

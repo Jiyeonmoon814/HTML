@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .city{
+                background-color: tomato;
+                color: white;
+                padding: 10px;
+            }
+
+            .note{
+                font-size: 110%;
+                color: red;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!--.class 
+        class는 여러가지 요소를 묶어서 하나로 지정 가능
+        그러므로 중복이 가능, 여러개 선택 가능-->
+        <h1>The class Atrribute</h1>
+        <h2 class="city">London</h2>
+        <p>London is the capital of <span class="note">England</span>.</p>
+
+        <h3 class="city">Paris</h3>
+        <p>Paris is the capital of France.</p>
+
+        <h4>Use of The class Attribute in JavaScript</h4>
+        <button onclick="myFunction()">Hide elements</button>
+
+        <h4 class="capital">Seoul</h4>
+        <p>Seoul is the capital of South Korea.</p>
+
+        <script>
+            function myFunction(){
+                var x = document.getElementsByClassName("capital");
+                for (var i=0; i<x.length; i++){
+                    x[i].style.display="none";
+                }
+            }
+        </script>
+
+        <h5 id="myHeader">Hello World!</h5>
+        <button onclick="displayResult()">Change text</button>
+
+        <script>
+            function displayResult(){
+                document.getElementById("myHeader").innerHTML = "Have a blast!";
+            }
+        </script>
+
+        <h6>Iframe - Target for a Link</h6>
+        <iframe src="url" title="description"></iframe>
+        <iframe src="demo_iframe.htm" name="iframe_a" height="300px" width="100%" title="Iframe Example"></iframe>
+
+        <p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
+    </body>
+</html>

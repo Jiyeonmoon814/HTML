@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>input tag</title>
+    </head>
+
+    <body>
+        <form action="">
+            <fieldset>
+                <legend>Text : pwd</legend><!--fieledest cation-->
+                Text : <input type="text" name="userid" id="userid"><br>
+                Pwd : <input type="text" name="pwd" maxlength="5"><br>
+                <hr>
+                Text2:<input type="text" name="data" id="data" maxlength="10"
+                    size="100px" value="default">
+                </hr><br>
+                readonly(able to transfer data to server)
+                <input type="text" name="data2" value="abc" readonly="readonly"><br>
+                disabled(Impossible to transfer data to server)
+                <input type="text" name="data3" value="def" disabled="disabled"><br>    
+            </fieldset>
+
+            <fieldset>
+                <legend>Check box(multiple checks></legend>
+                basketball:<input type="checkbox" name="sport_1" value="A" checked="checked">
+                baseball:<input type="checkbox" name="sport_2" value="A">
+                football:<input type="checkbox" name="sport_3" value="A">
+
+                  <!--  
+                     서버 전송하기 (GET)
+                     register.jsp?sports_1=A&sports_2=B&sports_3=C
+                     
+                     register.jsp
+                     String str = request.getParameter("sports_1");
+                     str 변수에는 >> A
+                            
+                            
+                     basketball:<input type="checkbox" name="sports_1" value="A"  checked="checked">
+                     baseball:<input type="checkbox" name="sports_1" value="A">
+                     football::<input type="checkbox" name="sports_1" value="A">
+                  
+                  register.jsp?sports=A&sports=B&sports=C
+                  register.jsp
+                  String[] str = request.getParameter("sports");
+                  str[0] >> A
+                  str[1] >> B
+                  str[2] >> C
+                  -->
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Select tag(Single selection:yy,mm,dd></legend>
+                <select name="year">
+                    <option value="2020" selected>2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Select tag(multiple selection:yy,mm,dd></legend>
+                <select name="items" multiple>
+                    <option value="2020" selected>2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Radio button(Single selection : female, male):If a name is the same, it'll be in one group></legend>
+                female<input type="radio" name="gender" value="1" checked="checked"><br>
+                male<input type="radio" name="gender" value="2"><br>
+                not to say<input type="radio" name="gender" value="3"><br>
+                <!--name이 다르면 다중 선택이됨
+                radio button에서 name이 같아야 하나의 그룹으로 인지되어 단일선택만 가능-->
+            </fieldset>
+
+            <fieldset>
+                <legend>Etc</legend>
+                1.화면에 출력은 안되지만 소스는 공유됨 >> 중요정보의 경우 해킹되기 쉬움 
+                <input type="hidden" value="1000" name="hdata">
+                <hr>
+                2.file upload(Select only, If you wanna transfer a data to the surver u have to make a sourse for it)
+                <input type="file" name="uploadimage"><hr>
+                3.Wirte on the board(multiple lines) : defualt size(rows,cols)<br>
+                <textarea rows="10" cols="" name="content">Write</textarea><hr>
+                4.Other buttons<br>
+                <input type="button" value="button without function"><br>
+                <input type="button" value="button with function" onclick="alert('Good morning')"><br>
+                <input type="image" src="../Images/google.jpg"><br>
+                <input type="reset" value="delete input value"><br>
+
+
+            </fieldset>
+
+            
+        </form>
+    </body>
+</html>
