@@ -28,7 +28,80 @@
   <input type="submit" value="submit">
 </form>
 
+<h2>Input Data field</h2>
+<p>The <strong>input type="data"</strong> is used for input fields that should contain a date.</p>
+<form action="/action_page.php">
+  <label for="birthday">Birthday</label>
+  <input type="data" id="birthday" name="birthday">
+  <input type="submit" value="submit">
+</form>
 
+<h2>Data Field Restraction>>Age restraction</h2>
+<p>Use the <mark>min</mark> and <mark>max</mark> attributes to add restrictions to dates:</p>
+<form action="/action_page.php">
+  <label for="datamax">Enter a date before 1980-01-01:</label>
+  <input type="date" id="datamax" name="datamax" max="1979-12-31"><br><br>
+  <label for="datamin">Enter a date after 2000-01-01:</label>
+  <input type="date" id="datamin" name="datamin" min="2000-01-02"><br><br>
+  
+  <label for="betweendates">Enter a date between 1980-01-01 and 1999-12-31:</label>
+  <input type="date" id="datares" name="datares" min="1980-01-01" max="1999-12-31"><br><br>
+  <input type="submit" value="submit">
+</form>
 
+<h2>Email Filed>>Reg expression for e-mail</h2>
+<p>The <strong>input type="email"</strong> is used for input fields that should contain an e-mail address:</p>
+
+<form action="/action_page.php">
+  <label for="email" id="email" name="email">Enter your e-mail:</label>
+  <input type="email" id="email" name="email">
+  <input type="submit" value="submit">
+</form>
+
+<h2>Number Field</h2>
+<p>The <strong>input type="number"</strong> defines a numeric input field.</p>
+<p>You can use the min and max attributes to add numeric restrictions in the input field:</p>
+
+<form action="/action_page.php">
+  <label for="quantity">quantity(between 1 and 5)</label> 
+  <input type="number" id="quantity" name="quantity" min="1" max="5">
+  <input type="submit" value="submit">
+</form>
+
+<h2>Range Field</h2>
+<p>Depending on browser support : The input type "range" can be displayed as a slider control.</p>
+
+<form action="/action_page.php" method="get">
+  <label for="vol">Volume, Price etc (between min to max)</label>
+  <input type="range" id="vol" name="vol" min="0" max="50">
+  <input type="submit" value="submit">
+</form>
+
+<h2>Telephone Field</h2>
+<p>The <strong>input type="tel"</strong> is used for input fiedls that should contain a telephone number:</p>
+<form action="/action_page.php">
+<label for="phone">Enter a phone number:</label><br><br>
+<input type="tel" id="phone" name="phone" placeholder="010-1234-5678" part="[0-1]{3}-[0-9]{4}-[0-9]{4}" required><br><br>
+<small>Format:010-1234-5678</small><br><br>
+<input type="submit" value="submit">
+</form>
+
+<h2>The input multiple attributes</h2>
+<p>The multiple attribute specifies that the user is allowed to enter more that one value in an input field</p>
+<form action="/action_page.php">
+<label for="fiels">Select fiels:</label>
+<input type="file" id="files" name="files" multiple><br><br>
+<input type="submit" value="submit">
+</form>
+
+<h2>The input autofocus attributes</h2>
+<p>The autofocus attribute spesifies that the input filed should automatically get focus when the page loads.</p>
+<form action="/action_page.php">
+<label for="fname">First name:</label><br>
+<input type="text" id="fname" name="fname" autofocus><br>
+<label for="lname">Last name:</label><br>
+<input type="text" id="lname" name="lname"><br><br>
+<input type="submit" value="submit">
+</form>
 </body>
 </html>
